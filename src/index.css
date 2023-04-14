@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 71 49 211;
+    --color-lang: 71 49 211;
+    --color-text: 107 114 128;
+    --color-title: 31 41 55;
+    --color-background: 245 245 245;
+  }
+
+  :root[class="dark"] {
+    --color-primary: 183 170 255;
+    --color-lang: 186 178 231;
+    --color-text: 255 255 255;
+    --color-title: 174 188 207;
+    --color-background: 33 30 35;
+  }
+}
+
+@layer components {
+  .atag {
+    @apply my-2;
+  }
+  .btn-hero {
+    @apply px-[20px] py-[12px] rounded-[6px] border-[1px] text-primary text-[18px];
+  }
+  .hrLine {
+    @apply text-[#BAB2E7] border-[1px] w-[screen/2];
+  }
+  .divider {
+    @apply my-5;
+  }
+}
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+}

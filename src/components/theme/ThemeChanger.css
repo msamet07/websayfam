@@ -1,0 +1,55 @@
+.sr-only {
+    margin-top: 10px;
+  }
+  #checkbox {
+    position: relative;
+    appearance: none;
+    outline: none;
+    width: 55px;
+    height: 24px;
+    border-radius: 100px;
+    background: #4731d3;
+    box-shadow: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  
+  #checkbox:checked {
+    background: #3a3a3a;
+  }
+  
+  #checkbox::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: inherit;
+    width: 20px;
+    height: 20px;
+    background: #ffe86e;
+    transition: inherit;
+  }
+  
+  #checkbox::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: calc(100% + 20px);
+    border-radius: inherit;
+    width: 20px;
+    height: 20px;
+    background: #3a3a3a;
+    transition: inherit;
+  }
+  
+  #checkbox:checked::before {
+    left: calc(100% - 22px);
+    background: #ffe86e;
+  }
+  
+  #checkbox:checked::after {
+    right: 7px;
+    background: #3a3a3a;
+  }
+  
